@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Assignment for a Frontend AngularJs Developer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="todo">
+
+  <div ng-controller="TODOController as to">
+      <form name="myForm">
+          <input type="text" ng-model="to.inputVal"></input>
+          <button ng-click="to.handleClick()">TODO</button>
+          <div ng-if="to.count > 0">
+              <p>{{to.list1[0]}}
+              <button ng-click="to.clearButton()">Clear  X</button>
+              </p>
+          </div>
+          <div ng-if="to.count > 1">
+              <p>{{to.list1[1]}}
+              <button ng-click="to.clearButton()">Clear  X</button>
+              </p>
+          </div>
+          <div ng-if="to.count > 2">
+              <p>{{to.list1[2]}}
+              <button ng-click="to.clearButton()">Clear  X</button>
+              </p>
+          </div>
+          <div ng-if="to.count > 3">
+              <p>{{to.list1[3]}}
+              <button ng-click="to.clearButton()">Clear  X</button>
+              </p>
+          </div>
+          <div ng-if="to.count > 4">
+              <p>{{to.list1[4]}}
+              <button ng-click="to.clearButton()">Clear  X</button>
+              </p>
+          </div>
+      </form>
+  </div>
+
+</body>
+</html>
